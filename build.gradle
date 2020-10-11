@@ -9,6 +9,8 @@ buildscript {
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+        classpath 'com.android.tools.build:gradle:3.1.4'  // 认准这行，有gradle插件版本的这个地方，对，就是这行
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'  // 添加本行，这个版本与gradle版本有关
     }
 }
 
