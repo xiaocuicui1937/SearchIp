@@ -1,6 +1,9 @@
-###简介
+##简介
+
 局域网内使用UDP组广播的方式，搜索注册过的服务端的所有设备ip、端口号信息
+
 ##用法
+
 客户端：使用单例模式，搜索后并有回调的方式
  ```
  DeviceFound.getInstances().searchDevice(new ISearchDeviceCallback() {
@@ -48,3 +51,22 @@ DeviceResponse.getInstance().execute(new IDeviceResCallback() {
         });
 ```
 
+#使用远程依赖的方式快速使用本库
+
+Add it in your root build.gradle at the end of repositories:
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+Step 2. Add the dependency
+```
+Tag:1.1.0
+dependencies {
+	        implementation 'com.github.xiaocuicui1937:SearchIp:Tag'
+}
+```
